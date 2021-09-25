@@ -28,6 +28,9 @@ const result = people.reduce((groupedPeople, person) => {
     Then we will push that person object (i.e {name: "Monty", age: 45}) into the newly created array.
 
     We then return the object(groupedPeople) with its 'reduced' values 
+
+    If a persons age is already a key for the object then the person object being looped over will be pushed into the object
+    object[age] = {person}
     */
     if(groupedPeople[age] == null) groupedPeople[age] = []
     groupedPeople[age].push(person)
